@@ -48,9 +48,11 @@ with model_traing:
     st.write(X.columns)
     st.subheader('Prediction')
     #st.write(y.columns)
+
     st.write(prediction)
     
 with plotly_1:
+    st.header("Animated Graph Using plotly")
     #Flower_name = df['species'].unique().tolist()
    # year=st.selectbox("which flower you want", Flower_name,0)
     fig=px.scatter(df,x="sepal_length",y='sepal_width',color='petal_length', size_max=55,
