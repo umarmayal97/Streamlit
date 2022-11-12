@@ -54,16 +54,16 @@ with model_traing:
     clf = RandomForestClassifier()
     clf.fit(X, y)
     prediction = clf.predict(df1)
-    #st.subheader('Prediction')
-    #st.write(prediction)
-    #prediction_proba = clf.predict_proba(df1)
-    #if prediction[0]==0:
-    #    color="Green"
-    #else:
-    #    color="Red"
+    st.subheader('Prediction')
+    st.write(prediction)
+    prediction_proba = clf.predict_proba(df1)
+    if prediction[0]==0:
+        color="Green"
+    else:
+        color="Red"
     
-    #st.subheader('Class labels and their corresponding index number')
-    #st.write(X.columns)
+    st.subheader('Class labels and their corresponding index number')
+    st.write(X.columns)
     
     st.header("Pregnancies count graph")
     st.subheader("Age vs Pregnancy")
