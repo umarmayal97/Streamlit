@@ -54,14 +54,16 @@ with model_traing:
     clf = RandomForestClassifier()
     clf.fit(X, y)
     prediction = clf.predict(df1)
-    st.subheader('Prediction')
-    st.write(prediction)
-    prediction_proba = clf.predict_proba(df1)
-    if prediction[0]==0:
-        color="Green"
-    else:
-        color="Red"
-    
+    try:
+        st.subheader('Prediction')
+        st.write(prediction)
+        prediction_proba = clf.predict_proba(df1)
+        if prediction[0]==0:
+            color="Green"
+        else:
+            color="Red"
+    except:
+        st.text("please Enter the parameters, Thanks")
     st.subheader('Class labels and their corresponding index number')
     st.write(X.columns)
     
