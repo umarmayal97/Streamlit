@@ -71,7 +71,7 @@ with model_traing:
     ax1=sns.scatterplot(x="Age",y="Pregnancies",data=df,hue="Outcome",
                         palette="Greens")
     ax2=sns.scatterplot(x=df1["Age"], y=df1["Pregnancies"],s=150, 
-                           color=color)
+                           color="Blue")
     plt.xticks(np.arange(0,100,5))
     plt.yticks(np.arange(0,20,2))
     plt.title("Diabetes Prediction")
