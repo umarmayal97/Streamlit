@@ -53,9 +53,9 @@ with feature:
 with model_traing:
     clf = RandomForestClassifier()
     clf.fit(X, y)
-    prediction = clf.predict(df1)
+   # prediction = clf.predict(df1)
     st.subheader('Prediction')
-    st.write(prediction)
+    #st.write(prediction)
     prediction_proba = clf.predict_proba(df1)
     if prediction[0]==0:
         color="Green"
